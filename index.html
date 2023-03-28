@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br
+">
+
+<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Imc</title>
+</head>
+
+     
+<body>
+
+    <h1>Imc dos guri</h1>
+    <br>
+    <br>
+    <br>
+    
+    <label for="peso">Peso (kg)</label>
+    <input type="number" id="peso" name="peso">
+    <br>
+
+    <label for="altura">Altura</label>
+    <input type="nunber" id="altura" name="altura">
+    <br>
+
+    <button onclick="Calcularimc()">Calcular IMC</button>
+    <br>
+    <p>Seu indice de massa corporal é <span id="resultado"></span></p>
+
+    <script>
+        function Calcularimc() {
+            const peso = document.getElementById("peso").value;
+            const altura = document.getElementById("altura").value;
+            const imc = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = imc.toFixed(2);
+
+        }
+    </script>
+
+</body>
+
+<footer>
+    <small> Desenvolvedor: Jeremias schell |  T: 51 985922330 &copy; </small>
+</footer>
+
+</html>
